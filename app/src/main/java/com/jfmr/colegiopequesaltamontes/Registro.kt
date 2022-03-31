@@ -73,12 +73,14 @@ class Registro : AppCompatActivity() {
     private fun cargarEstadisticas() {
         var lista_estudiantes: ArrayList<Estudiante> = operaciones!!.devolverLista()
         var mensaje_estadisticas: String = formatearLista(lista_estudiantes)
+        var procesados: IntArray = operaciones!!.cantidadProcesados()
 
         //Creamos el intent el encargado de la comunicación entre activities
         val intent = Intent(this, Estadisticas::class.java)
         //Creamos el bundle para el paso de información entre activities
         val miBundle: Bundle = Bundle()
         miBundle.putString("lista_estudiantes", mensaje_estadisticas)
+        miBundle.putIntArray("procesados", procesados)
         //Le agregamos la información al intent para que sea enviada
         intent.putExtras(miBundle)
         //Iniciamos el llamado a la nueva actividad
@@ -100,7 +102,7 @@ class Registro : AppCompatActivity() {
             mensaje += "nota3: ${estudiante.nota3}\n"
             mensaje += "nota4: ${estudiante.nota4}\n"
             mensaje += "nota5: ${estudiante.nota5}\n"
-            mensaje += "Promedio: ${estudiante.promedio}\n"
+            mensaje += "Promedio: ${estudiante.promedio}\n\n\n"
         }
         return mensaje
     }

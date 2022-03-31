@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">COLEGIO PEQUEÑO SALTAMONTES</string>
+    <string name="ayuda">La aplicación permite llevar un control de esudiantes con sus respectivas materia del conocimiento\n
+        y sus notas, presentando un promedio por estudiante y un consolidado del total de estudiantes, quiénes ganan, pierden,
+        recuperan la materia. Encontramos un menú principal con el botón registro de estudiantes que permite abrir la ventana de registro, donde se ingresan los datos\n
+        del estudiante con sus datos, materias y notas. El botón ver estadisticas nos muestra la información procesada.\n
+    </string>
 </resources>
